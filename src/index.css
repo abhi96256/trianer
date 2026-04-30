@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary: #ffffff;
+  --primary-container: #c3f400; /* Neon Lime */
+  --on-primary-container: #000000;
+  
+  --background: #111508;
+  --surface: #111508;
+  --surface-container: #1e2113;
+  --surface-container-high: #282b1d;
+  --surface-container-highest: #333627;
+  
+  --on-surface: #e2e4cf;
+  --on-surface-variant: #c4c9ac;
+  --outline: #444933;
+
+  /* Typography */
+  --font-display: 'Lexend', sans-serif;
+  --font-body: 'Lexend', sans-serif;
+  --font-label: 'Space Grotesk', sans-serif;
+
+  /* Spacing */
+  --margin-desktop: 64px;
+  --margin-mobile: 24px;
+  --gutter: 16px;
+  --stack-lg: 96px;
+  --stack-md: 48px;
+  --stack-sm: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--margin-desktop);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--margin-mobile);
+  }
+}
+
+/* Global Utilities */
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.font-black { font-weight: 900; }
+.tracking-tight { letter-spacing: -0.04em; }
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(204, 255, 0, 0.6);
+}
+
+.glass-stroke {
+  border: 2px solid var(--outline);
+}
+
+.bg-grid-subtle {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.snappy-hover {
+  transition: all 0.1s ease;
+}
+
+.snappy-hover:hover {
+  transform: skewX(-12deg);
+  background-color: var(--primary-container);
+  color: #000;
+}
+
+.btn-primary {
+  background-color: var(--primary-container);
+  color: #000;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  padding: 1rem 2.5rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--outline);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: italic;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-container);
+  color: var(--primary-container);
+}

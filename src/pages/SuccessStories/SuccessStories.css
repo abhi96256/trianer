@@ -1,0 +1,384 @@
+/* Bento Grid Specific Fixes to match Image 1/0 */
+.results-bento-section {
+  padding: 4rem 6%;
+  background: #000;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bento-card {
+  background: var(--surface-container-high);
+  border: 1px solid #2d2d2d;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.bento-card:hover {
+  border-color: var(--primary-container);
+}
+
+/* Sarah K Card */
+.bento-card.sarah-card {
+  grid-column: span 6;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sarah-card .img-banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sarah-card .img-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+/* Marquee Animation Fix */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-section {
+  padding: 2rem 0;
+  background: #000;
+  overflow: hidden;
+  border-top: 2px solid var(--primary-container);
+  border-bottom: 2px solid var(--primary-container);
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: 1.5rem; /* Reduced from 3rem */
+  font-weight: 900;
+  font-style: italic;
+  padding: 0 3rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.marquee-item.solid {
+  color: var(--primary-container);
+}
+
+.marquee-item.outlined {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-container);
+}
+
+/* Results CTA Upgrade */
+.results-cta {
+  padding: 5rem 6%; /* Reduced padding */
+  text-align: center;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem); /* Reduced from 8vw */
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.btn-solid-lime {
+  background: var(--primary-container);
+  color: #000;
+  padding: 1rem 3rem; /* Reduced padding */
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.1rem; /* Reduced font size */
+  border: none;
+  cursor: pointer;
+  transform: skewX(-12deg);
+  transition: all 0.2s ease;
+}
+
+.btn-solid-lime:hover {
+  transform: skewX(-12deg) scale(1.05);
+  box-shadow: 0 0 30px rgba(195, 244, 0, 0.4);
+}
+
+.btn-outline-lime-large {
+  background: transparent;
+  border: 2px solid var(--primary-container);
+  color: var(--primary-container);
+  padding: 1rem 3rem; /* Reduced padding */
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.1rem; /* Reduced font size */
+  cursor: pointer;
+  transform: skewX(-12deg);
+  transition: all 0.2s ease;
+  margin-left: 1.5rem;
+}
+
+.btn-outline-lime-large:hover {
+  background: var(--primary-container);
+  color: #000;
+  transform: skewX(-12deg) scale(1.05);
+}
+
+.sarah-card:hover .img-banner img {
+  filter: grayscale(0%);
+}
+
+.sarah-card .card-body {
+  padding: 2rem;
+}
+
+.sarah-card .card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.sarah-card .card-title span {
+  color: var(--primary-container);
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.sarah-card .card-divider {
+  height: 1px;
+  background: #2d2d2d;
+  margin-bottom: 1.5rem;
+}
+
+.sarah-card .card-stats-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sarah-card .stat-group label {
+  display: block;
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.sarah-card .stat-group .val {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+}
+
+/* High Impact Stat Card (Neon) */
+.bento-card.neon-card {
+  grid-column: span 3;
+  background: var(--primary-container);
+  color: #000;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.neon-card .hero-content {
+  position: absolute; /* Changed from relative */
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 90%;
+}
+
+.results-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem); /* Reduced from 7rem */
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.results-subtitle {
+  margin-top: 1rem;
+  max-width: 500px;
+  font-family: var(--font-display);
+  font-size: 1rem; /* Reduced from 1.5rem */
+  font-weight: 800;
+  font-style: italic;
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+}
+
+.neon-card .bolt-icon {
+  font-size: 2.5rem !important;
+  align-self: flex-end;
+}
+
+.neon-card .stat-val {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+}
+
+.neon-card .stat-label {
+  font-weight: 900;
+  font-size: 11px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+/* Join CTA Card */
+.bento-card.join-card {
+  grid-column: span 3;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.join-card .card-label {
+  color: var(--primary-container);
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.join-card .card-desc {
+  color: #94a3b8;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.join-card .btn-start {
+  border: 1px solid var(--primary-container);
+  color: var(--primary-container);
+  padding: 0.5rem 2rem;
+  font-weight: 900;
+  font-style: italic;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.join-card .btn-start:hover {
+  background: var(--primary-container);
+  color: #000;
+}
+
+/* James R Card */
+.bento-card.james-card {
+  grid-column: span 7;
+  display: flex;
+  padding: 0;
+}
+
+.james-card .text-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.james-card .img-side {
+  flex: 1;
+  height: 350px;
+}
+
+.james-card .img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.james-card:hover .img-side img {
+  filter: grayscale(0%);
+}
+
+.james-card .name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; color: #fff; font-style: italic; }
+.james-card .label { font-size: 10px; color: #64748b; font-weight: 700; text-transform: uppercase; }
+
+.james-card .quote-box {
+  background: #000;
+  padding: 1.5rem;
+  border-left: 2px solid var(--primary-container);
+  margin-top: 2rem;
+}
+
+.james-card .quote-box p {
+  font-size: 13px;
+  font-style: italic;
+  color: #e2e8f0;
+}
+
+/* Testimonial Card */
+.bento-card.review-card {
+  grid-column: span 5;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 4px solid var(--primary-container);
+  background: #000;
+}
+
+.review-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-container);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.review-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.review-card .review-body { flex: 1; }
+.review-card .stars { color: var(--primary-container); margin-bottom: 0.5rem; font-size: 12px; }
+.review-card .quote { font-size: 14px; font-style: italic; color: #fff; line-height: 1.3; }
+.review-card .author { color: var(--primary-container); font-size: 11px; font-weight: 700; margin-top: 1rem; }
+
+@media (max-width: 1024px) {
+  .bento-card.sarah-card, .bento-card.james-card, .bento-card.review-card { grid-column: span 12; }
+  .bento-card.neon-card, .bento-card.join-card { grid-column: span 6; }
+}
+
+@media (max-width: 640px) {
+  .bento-card.neon-card, .bento-card.join-card { grid-column: span 12; }
+  .james-card { flex-direction: column; }
+  .james-card .img-side { height: 250px; }
+}

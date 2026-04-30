@@ -1,0 +1,26 @@
+/* Hall of Fame Header Centering */
+.hall-header-centered {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.5rem !important;
+  margin-bottom: 4rem !important;
+  width: 100% !important;
+}
+
+.lime-icon-large {
+  font-size: 3rem !important;
+  color: var(--primary-container) !important;
+  font-variation-settings: 'FILL' 1 !important;
+  text-shadow: 0 0 15px rgba(195, 244, 0, 0.4) !important;
+}
+
+.hall-title {
+  font-family: var(--font-display) !important;
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  color: #fff !important;
+  margin: 0 !important;
+  letter-spacing: -1px !important;
+}
