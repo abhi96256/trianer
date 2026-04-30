@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import './Community.css';
 
 const Community = () => {
@@ -20,7 +22,7 @@ const Community = () => {
       {/* Main Content Grid */}
       <main className="community-main-grid">
         {/* Booking Form Section */}
-        <div className="booking-section">
+        <div className="booking-section" data-reveal-stagger>
           <div className="booking-card">
             <h2>RESERVE_SLOT</h2>
             <form className="form-grid">
@@ -58,7 +60,12 @@ const Community = () => {
               <div className="marker-radar"></div>
               <div className="marker-ping"></div>
               <div className="marker">
-                <span className="material-symbols-outlined text-black text-sm flex items-center justify-center h-full">fitness_center</span>
+                <FontAwesomeIcon 
+                  icon={faDumbbell} 
+                  rotation={90} 
+                  size="sm" 
+                  className="text-black"
+                />
               </div>
               <div className="tooltip">
                 <p className="tooltip-label">HQ_LOC_01: SECTOR_7_GRIND</p>
@@ -73,7 +80,7 @@ const Community = () => {
         </div>
 
         {/* Sidebar Section */}
-        <div className="sidebar-section">
+        <div className="sidebar-section" data-reveal-stagger>
           <div className="sidebar-card">
             <h3>DIRECT_CHANNEL</h3>
             <div className="contact-row">

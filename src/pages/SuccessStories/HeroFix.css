@@ -66,3 +66,24 @@
   max-width: 400px !important;
   text-transform: uppercase !important;
 }
+@media (max-width: 768px) {
+  .results-hero-section {
+    height: 350px !important;
+  }
+  .results-title {
+    font-size: 1.5rem !important;
+  }
+  .results-subtitle {
+    font-size: 0.75rem !important;
+    max-width: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-hero-section {
+    height: 300px !important;
+  }
+  .results-title {
+    font-size: 1.25rem !important;
+  }
+}

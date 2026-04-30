@@ -69,7 +69,7 @@ const SuccessStories = () => {
 
       {/* Results Bento Grid */}
       <section className="results-bento-section bg-black">
-        <div className="bento-grid">
+        <div className="bento-grid" data-reveal-stagger>
           <div className="bento-card sarah-card group">
             <div className="img-banner">
               <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiIvpl240EoqTrYc8XR9xPHPRcHv9G8Sx79o0OxiSJS8EZwBLP2Uy-9LlaR7HpVbPTcwL9xOQA9bb1ZiJEclN1lAtL-bmQ5ZmtlJAnr5aV_UTb0I_s-Z2tQrha50WSvrG4hGUaOqheAnj3wNFkFv3uVOwW6rJnexdoo-f2BwBLFZhXt4GsoavmSanZ-jezZQlCoRCHuiNFod1Dlo-qcpX76E3x9clSRSI735J9FE3w1Cm7rh6U3KEApE30yYyfjv4zy2phRoJ6H2o" alt="Sarah K" />

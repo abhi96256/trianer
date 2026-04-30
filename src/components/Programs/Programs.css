@@ -129,6 +129,9 @@
 .box.lime { background-color: var(--primary-container); }
 
 @media (max-width: 1024px) {
+  .overdrive-programs {
+    padding: 6rem 0;
+  }
   .bento-card {
     grid-column: span 6;
   }
@@ -138,11 +141,35 @@
 }
 
 @media (max-width: 768px) {
+  .overdrive-programs {
+    padding: 4rem 0;
+  }
   .bento-card {
     grid-column: span 12;
+    padding: 3rem 2rem;
   }
   .flex-row {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    gap: 2rem;
+  }
+  .community-grid {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .community-grid .box {
+    width: 3rem;
+    height: 3rem;
   }
 }
+
+@media (max-width: 480px) {
+  .headline-xl {
+    font-size: 1.15rem;
+  }
+  .headline-md {
+    font-size: 1rem;
+  }
+}
+
+

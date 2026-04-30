@@ -1,12 +1,74 @@
-/* Direct CSS from the High-Fidelity Community Design */
-
-.community-page {
-  background-color: #111508;
-  color: #e2e4cf;
-  font-family: 'Lexend', sans-serif;
-  overflow-x: hidden;
-  padding-top: 80px;
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 50px;
+  }
 }
+
+@media (max-width: 768px) {
+  .community-main-grid {
+    padding: 0 12px;
+    margin: 1.5rem auto;
+  }
+  .community-hero {
+    height: 300px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .booking-card {
+    padding: 20px 12px;
+    border-left-width: 4px;
+    box-shadow: 3px 3px 0px 0px #c3f400;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .objective-selector {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .btn-transmit {
+    font-size: 16px;
+    padding: 12px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 20px;
+  }
+  .booking-card h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .btn-transmit {
+    font-size: 14px;
+    padding: 10px;
+    letter-spacing: 0;
+  }
+  .social-big-text {
+    font-size: 24px;
+  }
+  .sidebar-card {
+    padding: 12px;
+  }
+  .sidebar-card h3 {
+    font-size: 1.1rem;
+  }
+  .input-technical {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
 
 /* Hero Section */
 .community-hero {
@@ -38,7 +100,8 @@
 }
 
 .hero-title {
-  font-size: 80px; /* Adjusted for better fit */
+  font-size: 80px;
+  /* Adjusted for better fit */
   font-weight: 900;
   color: #c3f400;
   font-style: italic;
@@ -48,7 +111,8 @@
 }
 
 .hero-subtitle {
-  font-size: 14px; /* Reduced to match image scale */
+  font-size: 14px;
+  /* Reduced to match image scale */
   font-weight: 700;
   color: #fff;
   margin-top: 1.5rem;
@@ -61,10 +125,11 @@
 .community-main-grid {
   max-width: 1280px;
   margin: 4rem auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -80,14 +145,17 @@
 
 .booking-card {
   background: #1e2113;
-  padding: 48px; /* Increased padding like image */
-  border-left: 12px solid #c3f400; /* Thicker like image */
+  padding: 48px;
+  /* Increased padding like image */
+  border-left: 12px solid #c3f400;
+  /* Thicker like image */
   box-shadow: 10px 10px 0px 0px #c3f400;
   margin-bottom: 32px;
 }
 
 .booking-card h2 {
-  font-size: 40px; /* Scaled down */
+  font-size: 40px;
+  /* Scaled down */
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
@@ -130,6 +198,7 @@
   font-style: italic;
   outline: none;
   transition: border-color 0.15s ease;
+  width: 100%;
 }
 
 .input-technical:focus {
@@ -227,11 +296,11 @@
 .marker {
   width: 32px;
   height: 32px;
-  background: #c3f400;
-  border: 4px solid #000;
+  color: rgba(195, 244, 0, 1.00);
+
   position: relative;
   z-index: 10;
-  box-shadow: 0 0 20px #c3f400;
+
 }
 
 .marker-ping {
@@ -254,14 +323,31 @@
 }
 
 @keyframes radar-ping {
-  0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(3.5); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
 }
 
 @keyframes radar-pulse {
-  0% { transform: scale(1); opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { transform: scale(6); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
 }
 
 .tooltip {
@@ -274,8 +360,15 @@
 }
 
 @keyframes tooltip-glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(195, 244, 0, 0.2); }
-  50% { box-shadow: 0 0 25px rgba(195, 244, 0, 0.5); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(195, 244, 0, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(195, 244, 0, 0.5);
+  }
 }
 
 .coord-box {

@@ -16,7 +16,7 @@ const About = () => {
 
       {/* Bento Grid */}
       <section className="bento-section container">
-        <div className="bento-grid">
+        <div className="bento-grid" data-reveal-stagger>
           {/* Personal Training */}
           <div className="bento-item pt-card glass-stroke">
             <div className="card-bg">
@@ -100,7 +100,7 @@ const About = () => {
 
       {/* Stats Section */}
       <section className="stats-grid-section">
-        <div className="container stats-grid">
+        <div className="container stats-grid" data-reveal-stagger>
           <div className="stat-item">
             <span className="value">500+</span>
             <span className="label">Athletes Trained</span>

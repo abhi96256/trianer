@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import './Contact.css';
 
 const Contact = () => {
@@ -96,7 +98,16 @@ const Contact = () => {
             <div className="map-box glass-stroke">
               <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Y8poPB1FbzuoQu9zwX3Rbx_8SdhQfaH8CrxKtZneagnn8J8IJcVTGu0LfBa9Q6zTgbFB7UTC9GWVGBb6uclZN_cPW2TYvkEyqgSCVxksL8Osc3PFXGtnlcHGzJPkEJJSIhR5eJchjAF0QO927iGvDNXw-xIn-K9cmx3mNIfBCB9IG7iDODGP0kpP619s-RjyzXsmvmlK9BhOBsVlzP7GPImf7p_mb1zSpWNWS8raBn0fC1xCLCepSg7bdXRDStGywLNrZXRxKlw" alt="Location Map" />
               <div className="map-overlay">
-                <div className="pulse-dot"></div>
+                <div className="map-pin-wrapper">
+                  <div className="pulse-ring"></div>
+                  <FontAwesomeIcon
+                    icon={faDumbbell}
+                    rotation={90}
+                    size="sm"
+                    className="map-dumbbell-icon"
+                    style={{ color: 'rgb(195, 244, 0)' }}
+                  />
+                </div>
                 <span>LIVE AT APEX HQ</span>
               </div>
             </div>

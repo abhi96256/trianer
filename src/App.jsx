@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Programs from './components/Programs/Programs';
@@ -9,10 +10,15 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import ProgramsPage from './pages/ProgramsPage/ProgramsPage';
 import Community from './pages/Community/Community';
+import SmoothScroll from './components/SmoothScroll/SmoothScroll';
+import CustomCursor from './components/CustomCursor/CustomCursor';
 import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  // Activate scroll-reveal; re-runs whenever the active page changes
+  useScrollReveal(currentPage);
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
@@ -54,15 +60,20 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
-      
-      <main>
-        {renderPage()}
-      </main>
+    <>
+      <CustomCursor />
+      <SmoothScroll>
+        <div className="app">
+          <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
 
-      <Footer />
-    </div>
+          <main>
+            {renderPage()}
+          </main>
+
+          <Footer />
+        </div>
+      </SmoothScroll>
+    </>
   );
 }
 

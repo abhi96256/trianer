@@ -1,0 +1,35 @@
+/* ─── Smooth Scroll Wrapper ───────────────────────────────── */
+
+/*
+  The wrapper sits fixed at the top of the viewport.
+  Its height is "natural" (auto) so ResizeObserver can
+  measure the real content height and push it onto <body>.
+  The translateY is driven by rAF in SmoothScroll.jsx.
+*/
+
+.smooth-scroll-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* GPU-accelerated compositing layer */
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* Prevent sub-pixel blurring on some browsers */
+  transform: translate3d(0, 0, 0);
+}
+
+/* On touch devices or mobile screens, revert to native scrolling */
+@media (max-width: 1024px), (pointer: coarse) {
+  .smooth-scroll-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+}
+

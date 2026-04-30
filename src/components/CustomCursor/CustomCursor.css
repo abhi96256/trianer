@@ -1,0 +1,48 @@
+/* ─── Hide the system cursor everywhere ─────────────────── */
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+/* ─── Custom cursor wrapper ──────────────────────────────── */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+
+  /* Hot-spot centered on the icon */
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+/* ─── FontAwesome dumbbell icon ──────────────────────────── */
+.cursor-dumbbell-icon {
+  font-size: 22px;
+  display: block;
+
+  /* Neon green glow */
+  filter: drop-shadow(0 0 5px rgba(195, 244, 0, 0.85))
+          drop-shadow(0 0 12px rgba(195, 244, 0, 0.45));
+
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1),
+              filter    0.15s ease;
+}
+
+/* ─── Hover: scale up + bounce rotate + brighter glow ───── */
+.custom-cursor.cursor--hover .cursor-dumbbell-icon {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 10px rgba(195, 244, 0, 1))
+          drop-shadow(0 0 22px rgba(195, 244, 0, 0.65));
+}
+
+/* ─── Responsive: Disable on touch/mobile ───────────────── */
+@media (max-width: 1024px), (pointer: coarse) {
+  *, *::before, *::after {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor {
+    display: none !important;
+  }
+}

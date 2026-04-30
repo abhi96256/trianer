@@ -23,7 +23,7 @@
 
   /* Spacing */
   --margin-desktop: 64px;
-  --margin-mobile: 24px;
+  --margin-mobile: 32px;
   --gutter: 16px;
   --stack-lg: 96px;
   --stack-md: 48px;
@@ -36,25 +36,44 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: var(--background);
   color: var(--on-surface);
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--margin-desktop);
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--margin-mobile);
   }
+  
+  h1 { font-size: 1.75rem !important; line-height: 1.1 !important; }
+  h2 { font-size: 1.5rem !important; line-height: 1.2 !important; }
+  h3 { font-size: 1.25rem !important; line-height: 1.2 !important; }
+  
+  .display-xl { font-size: 1.75rem !important; }
+  .display-lg { font-size: 1.5rem !important; }
+  .display-md { font-size: 1.25rem !important; }
 }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.1rem !important; }
+  
+  .display-xl { font-size: 1.5rem !important; }
+}
+
 
 /* Global Utilities */
 .italic { font-style: italic; }
@@ -119,4 +138,63 @@ body {
 .btn-outline:hover {
   border-color: var(--primary-container);
   color: var(--primary-container);
+}
+
+/* ══════════════════════════════════════════════════════════
+   SCROLL REVEAL — slide in from left / right / bottom
+   Applied automatically via useScrollReveal hook.
+   Uses only transform + opacity → 100% GPU-composited.
+══════════════════════════════════════════════════════════ */
+
+/* Hidden states — set before element enters viewport */
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="left"]   { transform: translateX(-80px); }
+[data-reveal="right"]  { transform: translateX( 80px); }
+[data-reveal="bottom"] { transform: translateY( 60px); }
+[data-reveal="fade"]   { transform: scale(0.96);       }
+
+@media (max-width: 768px) {
+  [data-reveal="left"]   { transform: translateX(-30px); }
+  [data-reveal="right"]  { transform: translateX( 30px); }
+  [data-reveal="bottom"] { transform: translateY( 30px); }
+}
+
+/* Visible state — added by IntersectionObserver */
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger children inside a revealed parent */
+[data-reveal-stagger] > * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal-stagger].is-visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: none; }
+[data-reveal-stagger].is-visible > *:nth-child(n+6) { transition-delay: 0.55s; opacity: 1; transform: none; }
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-stagger] > * {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

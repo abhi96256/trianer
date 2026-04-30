@@ -373,12 +373,61 @@
 .review-card .author { color: var(--primary-container); font-size: 11px; font-weight: 700; margin-top: 1rem; }
 
 @media (max-width: 1024px) {
+  .results-hero-section {
+    min-height: 60vh;
+  }
   .bento-card.sarah-card, .bento-card.james-card, .bento-card.review-card { grid-column: span 12; }
   .bento-card.neon-card, .bento-card.join-card { grid-column: span 6; }
+}
+
+@media (max-width: 768px) {
+  .results-bento-section {
+    padding: 3rem 32px;
+  }
+  .hall-of-fame-container {
+    flex-direction: column;
+  }
+  .hall-of-fame-image-side, .hall-of-fame-text-side {
+    width: 100%;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .btn-outline-lime-large {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 640px) {
   .bento-card.neon-card, .bento-card.join-card { grid-column: span 12; }
   .james-card { flex-direction: column; }
   .james-card .img-side { height: 250px; }
+  .sarah-card .img-banner { height: 200px; }
+  .review-card { flex-direction: column; text-align: center; }
+  .review-card .avatar { margin: 0 auto; }
 }
+
+@media (max-width: 480px) {
+  .results-title {
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+  .neon-card .stat-val {
+    font-size: 1.75rem;
+  }
+  .athlete-name {
+    font-size: 1.25rem !important;
+  }
+  .btn-solid-lime, .btn-outline-lime-large {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+
+
+

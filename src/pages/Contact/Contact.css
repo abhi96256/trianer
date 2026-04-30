@@ -205,13 +205,32 @@
   gap: 0.75rem;
 }
 
-.pulse-dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: var(--primary-container);
+.map-pin-wrapper {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Expanding pulse ring behind the icon */
+.pulse-ring {
+  position: absolute;
+  inset: -6px;
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--primary-container);
-  animation: pulse 2s infinite;
+  border: 2px solid rgb(195, 244, 0);
+  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  opacity: 0;
+}
+
+/* The dumbbell icon itself */
+.map-dumbbell-icon {
+  font-size: 18px;
+  filter: drop-shadow(0 0 6px rgba(195, 244, 0, 0.9))
+          drop-shadow(0 0 14px rgba(195, 244, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
 }
 
 .map-overlay span {
@@ -250,6 +269,17 @@
   font-weight: 600;
 }
 
+@keyframes ping {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  80%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+
 @keyframes pulse {
   0% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.5); opacity: 0.5; }
@@ -263,6 +293,16 @@
 }
 
 @media (max-width: 768px) {
+  .contact-page {
+    padding-top: 5rem;
+  }
+  .contact-header {
+    text-align: center;
+    margin: 0 auto 3rem;
+  }
+  .form-container, .info-box {
+    padding: 2rem;
+  }
   .contact-form {
     grid-template-columns: 1fr;
   }
@@ -273,3 +313,16 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-stats {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .stat-box {
+    padding: 1.5rem;
+  }
+}
+

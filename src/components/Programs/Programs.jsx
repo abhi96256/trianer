@@ -9,7 +9,7 @@ const Programs = ({ onNavigate }) => {
           <span className="version-tag">V.4.0_ENHANCED</span>
         </div>
 
-        <div className="programs-bento">
+        <div className="programs-bento" data-reveal-stagger>
           {/* Neural Response */}
           <div className="bento-card wide glass-stroke group pointer-cursor" onClick={() => onNavigate && onNavigate('programs')}>
             <div className="card-icon-bg">

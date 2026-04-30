@@ -88,8 +88,25 @@
 @media (max-width: 768px) {
   .hall-of-fame-container {
     flex-direction: column !important;
+    min-height: auto;
   }
   .hall-of-fame-image-side, .hall-of-fame-text-side {
     flex: 0 0 100% !important;
   }
+  .hall-of-fame-image-side {
+    height: 300px;
+    border-right: none;
+    border-bottom: 4px solid var(--primary-container);
+  }
+  .hall-of-fame-text-side {
+    padding: 1.5rem;
+  }
+  .hall-stat-item .val {
+    font-size: 1.5rem;
+  }
+  .hall-quote {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
 }
+
