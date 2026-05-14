@@ -89,7 +89,7 @@ const Community = () => {
               </div>
               <div>
                 <p className="label-tiny">VOICE_LINK</p>
-                <p className="val-bold">+1 (800) OVER-DRV</p>
+                <p className="val-bold">+1 (800) PRAVIN-K</p>
               </div>
             </div>
             <div className="contact-row">
@@ -98,7 +98,7 @@ const Community = () => {
               </div>
               <div>
                 <p className="label-tiny">DATA_STREAM</p>
-                <p className="val-bold">ELITE@OVERDRIVE.PRO</p>
+                <p className="val-bold">ELITE@PRAVINKARN.COM</p>
               </div>
             </div>
             <div className="contact-row">

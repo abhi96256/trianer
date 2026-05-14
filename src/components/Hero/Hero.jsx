@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="overdrive-hero">
       <div className="hero-bg">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX951VF-XfcO3E5l7JycXKOvqCuZcUxbUu42RxmhQOj58JDhCV76xjUIjKU7gavWkz1s5DIzyzt7OwHoES2Vb6FbyKJKZU6OgCMDVvYy7GnHfqJEnatabgdpQdH0hWvbCdI7Lh7sLAsVZxVqiyAMfUQk5HeaxgHjgdP2Pr67Hcn-3miOfmcUAGZYKfARdeUR2XVIsFEnmW4_LBbCdHI2l3VdQoCoRtF_5fQ2QYAEwo6C1YHakH7PtiuuaU5KE60fyeG0y_iO2mv-w" alt="Overdrive Athlete" />
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX951VF-XfcO3E5l7JycXKOvqCuZcUxbUu42RxmhQOj58JDhCV76xjUIjKU7gavWkz1s5DIzyzt7OwHoES2Vb6FbyKJKZU6OgCMDVvYy7GnHfqJEnatabgdpQdH0hWvbCdI7Lh7sLAsVZxVqiyAMfUQk5HeaxgHjgdP2Pr67Hcn-3miOfmcUAGZYKfARdeUR2XVIsFEnmW4_LBbCdHI2l3VdQoCoRtF_5fQ2QYAEwo6C1YHakH7PtiuuaU5KE60fyeG0y_iO2mv-w" alt="PRAVIN KARN" />
         <div className="hero-overlay"></div>
       </div>
 

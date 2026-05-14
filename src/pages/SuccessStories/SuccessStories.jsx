@@ -60,7 +60,7 @@ const SuccessStories = () => {
               </div>
             </div>
             <blockquote className="hall-quote">
-              "OVERDRIVE DIDN'T JUST CHANGE MY BODY; IT REWIRED MY ENTIRE MINDSET. THE INTENSITY IS UNMATCHED."
+              "PRAVIN KARN DIDN'T JUST CHANGE MY BODY; IT REWIRED MY ENTIRE MINDSET. THE INTENSITY IS UNMATCHED."
             </blockquote>
             <button className="btn-dossier-fixed">READ FULL DOSSIER</button>
           </div>
@@ -98,11 +98,7 @@ const SuccessStories = () => {
             </div>
           </div>
 
-          <div className="bento-card join-card">
-            <p className="card-label uppercase italic">JOIN THE ELITE</p>
-            <p className="card-desc">Your transformation begins when you decide to stop being average.</p>
-            <button className="btn-start uppercase italic">START NOW</button>
-          </div>
+
 
           <div className="bento-card james-card group">
             <div className="text-content">
@@ -137,13 +133,13 @@ const SuccessStories = () => {
         <div className="marquee-content">
           <div className="marquee-track">
             <span className="marquee-item outlined">RESULTS NOT TYPICAL</span>
-            <span className="marquee-item solid">OVERDRIVE PERFORMANCE</span>
+            <span className="marquee-item solid">PRAVIN KARN PERFORMANCE</span>
             <span className="marquee-item outlined">BEYOND LIMITS</span>
             <span className="marquee-item solid">FUEL YOUR ANGER</span>
             <span className="marquee-item outlined">ELITE ONLY</span>
             {/* Repeat */}
             <span className="marquee-item outlined">RESULTS NOT TYPICAL</span>
-            <span className="marquee-item solid">OVERDRIVE PERFORMANCE</span>
+            <span className="marquee-item solid">PRAVIN KARN PERFORMANCE</span>
             <span className="marquee-item outlined">BEYOND LIMITS</span>
             <span className="marquee-item solid">FUEL YOUR ANGER</span>
             <span className="marquee-item outlined">ELITE ONLY</span>
@@ -158,7 +154,7 @@ const SuccessStories = () => {
           <span className="text-lime text-glow">THE NEXT SUCCESS STORY?</span>
         </h2>
         <div className="cta-buttons">
-          <button className="btn-solid-lime">START YOUR OVERDRIVE</button>
+          <button className="btn-solid-lime">START YOUR JOURNEY</button>
           <button className="btn-outline-lime-large">VIEW PROGRAMS</button>
         </div>
         <div className="scanlines"></div>

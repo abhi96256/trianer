@@ -13,7 +13,7 @@ const Navbar = ({ currentPage, onNavigate }) => {
     <header className="overdrive-header">
       <div className="header-container">
         <div className="brand-logo italic font-black cursor-pointer" onClick={() => handleLinkClick('home')}>
-          OVERDRIVE_PRO
+          PRAVIN KARN
         </div>
         
         <nav className={`main-nav ${isOpen ? 'mobile-open' : ''}`}>
@@ -45,15 +45,9 @@ const Navbar = ({ currentPage, onNavigate }) => {
           >
             COMMUNITY
           </a>
-          <div className="mobile-only-btn">
-            <button className="btn-join italic font-black">JOIN_ELITE</button>
-          </div>
         </nav>
 
         <div className="nav-actions">
-          <button className="btn-join italic font-black desktop-only">
-            JOIN_ELITE
-          </button>
           
           <button 
             className={`hamburger ${isOpen ? 'active' : ''}`} 
